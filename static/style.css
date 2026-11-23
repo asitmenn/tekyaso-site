@@ -9,7 +9,10 @@ body.ty { margin: 0; background: var(--ty-ink); color: #fff; font-family: "Monts
 .ty-badge { position: absolute; top: 0; left: -14px; transform: rotate(-6deg); background: var(--ty-red); color: var(--ty-yel); font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 18px; letter-spacing: 0.02em; padding: 5px 12px; border-radius: 10px; box-shadow: 0 6px 18px rgba(227, 6, 19, 0.35); z-index: 2; }
 .ty-logo { margin: 0; font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: 72px; line-height: 0.9; letter-spacing: 0.01em; background: var(--ty-yel); color: var(--ty-ink); padding: 10px 22px 4px; border-radius: 16px; }
 .ty-logo span { color: var(--ty-red); }
-.ty-tagline { margin: 0; font-size: 16px; font-weight: 700; color: #fff; max-width: 30ch; line-height: 1.4; }
+.ty-bio { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; text-align: left; font-size: 15px; font-weight: 700; line-height: 1.45; color: #fff; }
+.ty-bio li { padding-left: 1.5em; text-indent: -1.5em; }
+.ty-bio span { color: var(--ty-yel); display: inline-block; width: 1.2em; text-indent: 0; }
+.ty-bio a { color: var(--ty-yel); text-decoration: underline; text-underline-offset: 3px; }
 .ty-social { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
 .ty-social a { font-size: 13px; font-weight: 800; letter-spacing: 0.02em; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ty-line); transition: border-color 0.2s, background 0.2s; }
 .ty-social a:hover { border-color: var(--ty-yel); background: rgba(255, 212, 0, 0.08); }
