@@ -1,7 +1,7 @@
 /* TekYaso fırsat sayfası — sarı #FFD400, kırmızı #E30613, siyah #111 */
 :root { --ty-yel: #ffd400; --ty-red: #e30613; --ty-ink: #111111; --ty-card: #1b1b1b; --ty-line: rgba(255, 255, 255, 0.12); --ty-muted: #b9b9b9; }
 body.ty { margin: 0; background: var(--ty-ink); color: #fff; font-family: "Montserrat", system-ui, -apple-system, sans-serif; font-weight: 600; -webkit-font-smoothing: antialiased; }
-.ty a { color: inherit; text-decoration: none; }
+:where(.ty) a { color: inherit; text-decoration: none; }  /* düşük öncelik: sınıfların kendi renkleri (logo, sarı kutu, buton) ezilmesin */
 .ty-wrap { width: 100%; max-width: 560px; margin: 0 auto; padding: 32px 16px 28px; }
 
 .ty-head { text-align: center; display: grid; justify-items: center; gap: 14px; }
