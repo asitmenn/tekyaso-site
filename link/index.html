@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TekYaso | Fırsat linkleri</title>
+<meta name="description" content="TekYaso&#x27;nun test edip tavsiye ettiği teknoloji ürünleri ve fırsat linkleri tek sayfada.">
+<link rel="canonical" href="https://tekyaso.com/link/">
+<meta name="theme-color" content="#111111">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TekYaso">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:title" content="TekYaso | Fırsat linkleri">
+<meta property="og:description" content="TekYaso&#x27;nun test edip tavsiye ettiği teknoloji ürünleri ve fırsat linkleri tek sayfada.">
+<meta property="og:url" content="https://tekyaso.com/link/">
+<meta property="og:image" content="https://tekyaso.com/static/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="/static/style.css?v=1795410675">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "TekYaso", "url": "https://tekyaso.com/", "sameAs": ["https://www.instagram.com/tekyaso", "https://www.tiktok.com/@tekyaso", "https://www.youtube.com/@AsitmenMedya"]}</script>
+</head>
+<body class="ty">
+<main id="main" class="ty-wrap">
+  <header class="ty-head">
+    <div class="ty-brand">
+      <span class="ty-badge">FIRSAT!</span>
+      <h1 class="ty-logo">TEK<span>YASO</span></h1>
+    </div>
+    <p class="ty-tagline">Teknolojiyi test ediyorum, fırsatı gösteriyorum.</p>
+    <nav class="ty-social" aria-label="Sosyal medya"><a href="https://www.instagram.com/tekyaso" target="_blank" rel="noopener">Instagram</a><a href="https://www.tiktok.com/@tekyaso" target="_blank" rel="noopener">TikTok</a><a href="https://www.youtube.com/@AsitmenMedya" target="_blank" rel="noopener">YouTube</a></nav>
+  </header>
+
+  <section class="ty-tools" aria-label="Ara ve filtrele" hidden>
+    <input class="ty-search" type="search" placeholder="Ürün ara…" aria-label="Ürün ara">
+    <div class="ty-chips"><button class="ty-chip is-on" type="button" data-cat="">Hepsi</button></div>
+  </section>
+
+  <section class="ty-list" aria-label="Fırsatlar">
+  </section>
+  <p class="ty-none" hidden>Aradığın ürün bulunamadı.</p>
+
+  <div class="ty-empty" >
+    <b>YENİ FIRSATLAR YOLDA!</b>
+    <span>Test ettiğim ürünler burada listelenecek. İlk duyan sen ol.</span>
+    <a class="ty-follow" href="https://www.instagram.com/tekyaso" target="_blank" rel="noopener">@tekyaso'yu takip et</a>
+  </div>
+
+  <a class="ty-collab" href="/">
+    <b>MARKANI TEKYASO'DA TANITALIM</b><span>İş birliği paketlerini gör →</span>
+  </a>
+
+  <footer class="ty-foot">
+    <p>Bu sayfadaki bazı linkler işbirliği ya da komisyon içerebilir; bu linkler "REKLAM" etiketiyle işaretlenir. Fiyat ve stok bilgisi satıcı sitesinde değişebilir.</p>
+    <p>© 2026 TekYaso</p>
+  </footer>
+</main>
+<script>
+(function () {
+  var q = document.querySelector('.ty-search'), chips = [].slice.call(document.querySelectorAll('.ty-chip')),
+      cards = [].slice.call(document.querySelectorAll('.ty-card')), none = document.querySelector('.ty-none'), cat = '';
+  function run() {
+    var t = (q && q.value || '').toLocaleLowerCase('tr'), n = 0;
+    cards.forEach(function (c) {
+      var ok = (!cat || c.dataset.cat === cat) && (!t || c.dataset.q.indexOf(t) > -1);
+      c.hidden = !ok; if (ok) n++;
+    });
+    if (none) none.hidden = n > 0 || !cards.length;
+  }
+  chips.forEach(function (b) { b.addEventListener('click', function () {
+    chips.forEach(function (x) { x.classList.remove('is-on'); }); b.classList.add('is-on'); cat = b.dataset.cat; run();
+  }); });
+  if (q) q.addEventListener('input', run);
+})();
+</script>
+</body>
+</html>
