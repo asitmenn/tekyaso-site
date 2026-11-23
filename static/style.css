@@ -1,0 +1,111 @@
+/* TekYaso fırsat sayfası — sarı #FFD400, kırmızı #E30613, siyah #111 */
+:root { --ty-yel: #ffd400; --ty-red: #e30613; --ty-ink: #111111; --ty-card: #1b1b1b; --ty-line: rgba(255, 255, 255, 0.12); --ty-muted: #b9b9b9; }
+body.ty { margin: 0; background: var(--ty-ink); color: #fff; font-family: "Montserrat", system-ui, -apple-system, sans-serif; font-weight: 600; -webkit-font-smoothing: antialiased; }
+.ty a { color: inherit; text-decoration: none; }
+.ty-wrap { width: 100%; max-width: 560px; margin: 0 auto; padding: 32px 16px 28px; }
+
+.ty-head { text-align: center; display: grid; justify-items: center; gap: 14px; }
+.ty-brand { position: relative; padding-top: 22px; }
+.ty-badge { position: absolute; top: 0; left: -14px; transform: rotate(-6deg); background: var(--ty-red); color: var(--ty-yel); font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 18px; letter-spacing: 0.02em; padding: 5px 12px; border-radius: 10px; box-shadow: 0 6px 18px rgba(227, 6, 19, 0.35); z-index: 2; }
+.ty-logo { margin: 0; font-family: "Bebas Neue", Impact, sans-serif; font-weight: 400; font-size: 72px; line-height: 0.9; letter-spacing: 0.01em; background: var(--ty-yel); color: var(--ty-ink); padding: 10px 22px 4px; border-radius: 16px; }
+.ty-logo span { color: var(--ty-red); }
+.ty-tagline { margin: 0; font-size: 16px; font-weight: 700; color: #fff; max-width: 30ch; line-height: 1.4; }
+.ty-social { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.ty-social a { font-size: 13px; font-weight: 800; letter-spacing: 0.02em; padding: 8px 14px; border-radius: 999px; border: 1.5px solid var(--ty-line); transition: border-color 0.2s, background 0.2s; }
+.ty-social a:hover { border-color: var(--ty-yel); background: rgba(255, 212, 0, 0.08); }
+
+.ty-tools { margin-top: 26px; display: grid; gap: 12px; }
+.ty-search { width: 100%; box-sizing: border-box; border: 2px solid var(--ty-line); background: var(--ty-card); color: #fff; border-radius: 14px; padding: 14px 16px; font: inherit; font-size: 16px; outline: none; }
+.ty-search:focus { border-color: var(--ty-yel); }
+.ty-chips { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.ty-chips::-webkit-scrollbar { display: none; }
+.ty-chip { flex: none; font: inherit; font-size: 14px; font-weight: 800; color: #fff; background: var(--ty-card); border: 1.5px solid var(--ty-line); border-radius: 999px; padding: 8px 14px; cursor: pointer; }
+.ty-chip.is-on { background: var(--ty-yel); color: var(--ty-ink); border-color: var(--ty-yel); }
+
+.ty-list { margin-top: 18px; display: grid; gap: 12px; }
+.ty-card { background: var(--ty-card); border: 1.5px solid var(--ty-line); border-radius: 18px; overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+.ty-card:hover { border-color: var(--ty-yel); transform: translateY(-2px); }
+.ty-card[hidden] { display: none; }
+.ty-main { display: grid; grid-template-columns: 84px 1fr; gap: 12px 14px; padding: 12px; align-items: center; }
+.ty-img { width: 84px; height: 84px; border-radius: 12px; overflow: hidden; background: #fff; display: grid; place-items: center; }
+.ty-img img { width: 100%; height: 100%; object-fit: cover; }
+.ty-ph { font-family: "Bebas Neue", sans-serif; font-size: 44px; color: var(--ty-ink); background: var(--ty-yel); width: 100%; height: 100%; display: grid; place-items: center; }
+.ty-info { display: grid; gap: 3px; min-width: 0; }
+.ty-store { font-size: 11px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ty-yel); }
+.ty-info b { font-size: 16px; font-weight: 800; line-height: 1.25; }
+.ty-info small { font-size: 13px; color: var(--ty-muted); font-weight: 600; line-height: 1.35; }
+.ty-tags { display: flex; gap: 6px; margin-top: 4px; }
+.ty-tag { font-size: 10px; font-weight: 900; letter-spacing: 0.06em; padding: 3px 7px; border-radius: 6px; background: rgba(255, 255, 255, 0.1); color: #fff; }
+.ty-tag--ad { background: #fff; color: var(--ty-ink); }
+.ty-go { grid-column: 1 / -1; display: block; text-align: center; font-family: "Bebas Neue", sans-serif; font-size: 22px; letter-spacing: 0.04em; background: var(--ty-red); color: #fff; border-radius: 12px; padding: 9px 12px 6px; }
+.ty-card:hover .ty-go { background: #ff1a29; }
+.ty-video { display: block; text-align: center; font-size: 13px; font-weight: 800; color: var(--ty-yel); padding: 0 12px 12px; }
+.ty-none { text-align: center; color: var(--ty-muted); margin: 18px 0 0; }
+
+.ty-empty { margin-top: 28px; display: grid; gap: 10px; justify-items: center; text-align: center; background: var(--ty-card); border: 2px dashed rgba(255, 212, 0, 0.5); border-radius: 18px; padding: 28px 18px; }
+.ty-empty[hidden] { display: none; }
+.ty-empty b { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 34px; letter-spacing: 0.02em; color: var(--ty-yel); line-height: 1; }
+.ty-empty span { color: var(--ty-muted); font-size: 14px; max-width: 32ch; line-height: 1.45; }
+.ty-follow { margin-top: 6px; font-family: "Bebas Neue", sans-serif; font-size: 22px; letter-spacing: 0.04em; background: var(--ty-yel); color: var(--ty-ink); border-radius: 12px; padding: 9px 18px 6px; }
+
+.ty-collab { margin-top: 22px; display: grid; gap: 4px; text-align: center; background: var(--ty-yel); color: var(--ty-ink); border-radius: 18px; padding: 16px; }
+.ty-collab b { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: 28px; line-height: 1; letter-spacing: 0.02em; }
+.ty-collab span { font-size: 14px; font-weight: 800; }
+
+.ty-foot { margin-top: 26px; text-align: center; font-size: 12px; color: #8a8a8a; line-height: 1.5; }
+.ty-foot p { margin: 0 0 8px; }
+.ty-foot a { text-decoration: underline; text-underline-offset: 3px; }
+.ty-tools[hidden] { display: none; }
+
+/* ---------- /tekyaso/isbirligi ---------- */
+.ty-collab-page main { overflow-x: hidden; }
+.ty-collab-page mark { background: var(--ty-yel); color: var(--ty-ink); padding: 0 0.12em; border-radius: 6px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.ty-hero { background: radial-gradient(120% 80% at 80% 0%, rgba(227, 6, 19, 0.35), transparent 60%), var(--ty-ink); padding: 34px 16px 46px; }
+.ty-hero-in { max-width: 1080px; margin: 0 auto; display: grid; gap: 34px; align-items: center; }
+@media (min-width: 900px) { .ty-hero-in { grid-template-columns: 1.2fr 0.8fr; } .ty-hero { padding: 60px 32px 80px; } }
+.ty-mini-logo { display: inline-flex; font-family: "Bebas Neue", sans-serif; font-size: 30px; line-height: 1; background: var(--ty-yel); color: var(--ty-ink); padding: 6px 12px 2px; border-radius: 10px; }
+.ty-mini-logo span + span { color: var(--ty-red); }
+.ty-hero h1 { margin: 18px 0 0; font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(46px, 9vw, 92px); line-height: 0.95; letter-spacing: 0.01em; }
+.ty-lead { margin: 18px 0 0; font-size: 17px; line-height: 1.55; color: #e6e6e6; max-width: 44ch; }
+.ty-ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+.ty-btn { display: inline-flex; align-items: center; justify-content: center; font-family: "Bebas Neue", sans-serif; font-size: 24px; letter-spacing: 0.03em; padding: 12px 22px 8px; border-radius: 14px; transition: transform 0.15s, background 0.2s; }
+.ty-btn:hover { transform: translateY(-2px); }
+.ty-btn--red { background: var(--ty-red); color: #fff; box-shadow: 0 10px 30px rgba(227, 6, 19, 0.35); }
+.ty-btn--ghost { border: 2px solid var(--ty-line); color: #fff; }
+.ty-btn--ink { background: var(--ty-ink); color: var(--ty-yel); }
+.ty-phone { position: relative; justify-self: center; width: min(78vw, 300px); aspect-ratio: 9 / 16; border-radius: 34px; border: 8px solid #2a2a2a; background: #000; box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 2px rgba(255, 212, 0, 0.35); transform: rotate(3deg); }
+.ty-phone video { width: 100%; height: 100%; object-fit: cover; border-radius: 26px; display: block; }
+.ty-phone-badge { position: absolute; top: 18px; left: -18px; z-index: 2; transform: rotate(-8deg); background: var(--ty-red); color: var(--ty-yel); font-family: "Montserrat", sans-serif; font-weight: 900; font-size: 18px; padding: 5px 12px; border-radius: 10px; }
+.ty-phone-cap { position: absolute; bottom: -34px; left: 0; right: 0; text-align: center; font-size: 12px; color: var(--ty-muted); font-weight: 700; transform: rotate(-3deg); }
+
+.ty-sec { max-width: 1080px; margin: 0 auto; padding: 56px 16px 8px; }
+@media (min-width: 900px) { .ty-sec { padding: 80px 32px 8px; } }
+.ty-kick { font-size: 13px; font-weight: 900; letter-spacing: 0.12em; color: var(--ty-yel); }
+.ty-sec h2 { margin: 10px 0 26px; font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(38px, 6vw, 64px); line-height: 1; }
+.ty-grid3 { display: grid; gap: 12px; }
+@media (min-width: 760px) { .ty-grid3 { grid-template-columns: repeat(3, 1fr); } }
+.ty-box { background: var(--ty-card); border: 1.5px solid var(--ty-line); border-radius: 18px; padding: 20px; display: grid; gap: 8px; align-content: start; }
+.ty-ico { font-size: 30px; }
+.ty-box b, .ty-why b, .ty-pack b { font-size: 18px; font-weight: 800; }
+.ty-box p, .ty-why p, .ty-pack p { margin: 0; color: var(--ty-muted); font-size: 14.5px; line-height: 1.5; font-weight: 600; }
+.ty-grid2 { display: grid; gap: 12px; }
+@media (min-width: 760px) { .ty-grid2 { grid-template-columns: 1fr 1fr; } }
+.ty-why { border-left: 4px solid var(--ty-yel); background: var(--ty-card); border-radius: 0 16px 16px 0; padding: 16px 18px; display: grid; gap: 6px; }
+.ty-packs { display: grid; gap: 12px; }
+@media (min-width: 760px) { .ty-packs { grid-template-columns: repeat(3, 1fr); } }
+.ty-pack { position: relative; background: var(--ty-card); border: 1.5px solid var(--ty-line); border-radius: 18px; padding: 22px 18px 18px; display: grid; gap: 8px; align-content: start; }
+.ty-pack.is-hot { border: 2px solid var(--ty-yel); }
+.ty-hot { position: absolute; top: -11px; left: 16px; background: var(--ty-yel); color: var(--ty-ink); font-size: 10px; font-weight: 900; letter-spacing: 0.08em; padding: 4px 8px; border-radius: 6px; }
+.ty-pack-cta { margin-top: 6px; font-weight: 800; font-size: 14px; color: var(--ty-yel); }
+.ty-note { margin: 14px 0 0; color: var(--ty-muted); font-size: 13px; }
+.ty-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+@media (min-width: 760px) { .ty-steps { grid-template-columns: repeat(2, 1fr); } }
+.ty-steps li { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; background: var(--ty-card); border: 1.5px solid var(--ty-line); border-radius: 18px; padding: 16px; }
+.ty-n { width: 44px; height: 44px; border-radius: 50%; background: var(--ty-red); color: #fff; display: grid; place-items: center; font-family: "Bebas Neue", sans-serif; font-size: 26px; padding-top: 3px; box-sizing: border-box; }
+.ty-steps b { font-size: 17px; font-weight: 800; }
+.ty-steps p { margin: 4px 0 0; color: var(--ty-muted); font-size: 14px; line-height: 1.5; }
+.ty-final { max-width: 1016px; margin: 56px 16px 0; background: var(--ty-yel); color: var(--ty-ink); border-radius: 22px; padding: 30px 20px; text-align: center; display: grid; gap: 10px; justify-items: center; }
+@media (min-width: 1048px) { .ty-final { margin: 80px auto 0; } }
+.ty-final b { font-family: "Bebas Neue", sans-serif; font-weight: 400; font-size: clamp(38px, 6vw, 60px); line-height: 1; }
+.ty-final p { margin: 0; font-weight: 700; max-width: 40ch; }
+.ty-collab-page .ty-foot { margin-top: 30px; padding-bottom: 30px; }
